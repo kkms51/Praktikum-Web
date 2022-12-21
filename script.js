@@ -13,10 +13,10 @@ const winCombos = [
 ]
 
 const cells = document.querySelectorAll('.cell');
-startGame();
+start();
 
-function startGame() {
-	document.querySelector(".endgame").style.display = "none";
+function start() {
+	document.querySelector(".end").style.display = "none";
 	origBoard = Array.from(Array(9).keys());
 	for (var i = 0; i < cells.length; i++) {
 		cells[i].innerText = '';
@@ -64,8 +64,8 @@ function gameOver(gameWon) {
 }
 
 function declareWinner(who) {
-	document.querySelector(".endgame").style.display = "block";
-	document.querySelector(".endgame .text").innerText = who;
+	document.querySelector(".end").style.display = "block";
+	document.querySelector(".end .text").innerText = who;
 }
 
 function emptySquares() {

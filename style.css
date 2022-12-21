@@ -33,7 +33,7 @@ table tr td:last-child {
 	border-right: 0;
 }
 
-.endgame {
+.end {
   display: none;
   width: 200px;
   top: 120px;
@@ -48,6 +48,7 @@ table tr td:last-child {
   color: white;
   font-size: 2em;
 }
+
 button{
   bottom: 500px;
   position: absolute; 
