@@ -1,0 +1,33 @@
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Github taker</title>
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <link href="style.css" rel="stylesheet" />
+  <script data-semver="1.2.7" src="https://code.angularjs.org/1.2.7/angular.js" data-require="angular.js@1.2.x"></script>
+  <script src="script.js"></script>
+</head>
+
+<body ng-app="githubAPI">
+  <div ng-controller="MainCtrl">
+    <input type="text" ng-model="username" placeholder="GitHub username" id="github-api-input" onclick="this.focus();this.select()">
+    <p ng-show="callingOut">Calling out....</p>
+    <button type="button" ng-click="callAPI()" id="github-api-btn">Call API</button>
+    
+    <div class="profile-row">
+      <div class="profile-image">
+        <img ng-src="{{ avatarSrc }}"></img>
+        
+      </div>
+      <div class="profile-details">
+        <pre> {{ avatarSrc }} </pre>
+      </div>
+    </div>
+    
+  </div>
+</body>
+
+</html>
